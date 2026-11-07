@@ -1,0 +1,412 @@
+
+<div class="menu-page" *ngIf="!loading && restaurant">
+
+  <!-- ===============================
+       LUXURY RESTAURANT HERO
+  ================================ -->
+  <header class="restaurant-banner">
+
+    <div class="hero-glow hero-glow-one"></div>
+    <div class="hero-glow hero-glow-two"></div>
+
+    <div class="hero-decoration">
+      <span>✦</span>
+      <span>✧</span>
+      <span>✦</span>
+    </div>
+
+    <div class="restaurant-brand">
+
+      <div class="logo-frame">
+        <div class="logo-inner">
+          <img
+            [src]="restaurant.logo"
+            [alt]="restaurant.restaurantName + ' logo'">
+        </div>
+      </div>
+
+      <div class="brand-caption">
+        <span></span>
+        AUTHENTIC FLAVOURS
+        <span></span>
+      </div>
+
+      <h1>{{ restaurant.restaurantName }}</h1>
+
+      <div class="brand-divider">
+        <span></span>
+        <i>✦</i>
+        <span></span>
+      </div>
+
+      <p class="restaurant-tagline">
+        {{ restaurant.tagline }}
+      </p>
+
+      <div class="brand-location">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/>
+          <circle cx="12" cy="9" r="2.5"/>
+        </svg>
+        {{ restaurant.address }}
+      </div>
+
+    </div>
+
+    <div class="hero-bottom">
+
+      <div class="hero-line"></div>
+
+      <span>GOOD FOOD. GREAT MOMENTS.</span>
+
+      <div class="hero-line"></div>
+
+    </div>
+
+    <div class="hero-corner hero-corner-left"></div>
+    <div class="hero-corner hero-corner-right"></div>
+
+  </header>
+
+
+  <!-- ===============================
+       MAIN MENU
+  ================================ -->
+  <main class="menu-container">
+
+    <!-- Menu introduction -->
+    <section class="intro-section">
+
+      <div class="intro-content">
+
+        <div class="section-eyebrow">
+          <span></span>
+          DISCOVER OUR CUISINE
+        </div>
+
+        <h2>
+          Our Menu<span>.</span>
+        </h2>
+
+        <p>
+          Explore our selection of delicious favourites,
+          crafted to bring you an unforgettable experience.
+        </p>
+
+      </div>
+
+      <div class="menu-count">
+
+        <div class="count-decoration">✦</div>
+
+        <strong>{{ totalItems }}</strong>
+
+        <span>MENU ITEMS</span>
+
+      </div>
+
+    </section>
+
+
+    <!-- Search section -->
+    <section class="search-section">
+
+      <div class="search-container">
+
+        <svg class="search-icon"
+             viewBox="0 0 24 24"
+             aria-hidden="true">
+
+          <circle cx="10.8" cy="10.8" r="6.8"></circle>
+          <path d="m16 16 5 5"></path>
+
+        </svg>
+
+        <input
+          type="text"
+          placeholder="Search dishes, flavours..."
+          [(ngModel)]="searchText"
+          aria-label="Search menu items">
+
+        <button
+          *ngIf="searchText"
+          type="button"
+          class="clear-search"
+          (click)="searchText = ''"
+          aria-label="Clear search">
+
+          ✕
+
+        </button>
+
+        <div class="search-label">
+          EXPLORE
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Category navigation -->
+    <nav class="category-navigation"
+         aria-label="Menu categories">
+
+      <button
+        type="button"
+        class="category-pill"
+        [class.active]="selectedCategory === 'All'"
+        (click)="selectCategory('All')">
+
+        <span class="all-category-icon">✦</span>
+        All
+
+      </button>
+
+      <button
+        type="button"
+        class="category-pill"
+        *ngFor="let category of restaurant.categories"
+        [class.active]="selectedCategory === category.categoryName"
+        (click)="selectCategory(category.categoryName)">
+
+        {{ category.categoryName }}
+
+      </button>
+
+    </nav>
+
+
+    <!-- ===============================
+         FOOD CATEGORY SECTIONS
+    ================================ -->
+    <div class="menu-content">
+
+      <section
+        *ngFor="let category of filteredCategories"
+        class="category-section">
+
+        <!-- Category heading -->
+        <div class="category-heading">
+
+          <div class="category-title-group">
+
+            <div class="section-eyebrow">
+              <span></span>
+              FRESHLY PREPARED
+            </div>
+
+            <h2>{{ category.categoryName }}</h2>
+
+          </div>
+
+          <div class="category-count">
+
+            <span>{{ category.items.length }}</span>
+            DISHES
+
+          </div>
+
+        </div>
+
+
+        <!-- Food cards -->
+        <div class="food-grid">
+
+          <article
+            class="food-card"
+            *ngFor="let item of category.items">
+
+            <!-- Food image -->
+            <div class="food-image-container">
+
+              <img
+                [src]="getItemImage(item, category.categoryName)"
+                [alt]="item.name"
+                loading="lazy"
+                decoding="async"
+                class="food-image">
+
+              <div class="image-overlay"></div>
+
+              <!-- Veg / Non Veg indicator -->
+              <div
+                class="food-type"
+                [class.veg]="item.isVeg"
+                [class.non-veg]="!item.isVeg"
+                [attr.aria-label]="item.isVeg ? 'Vegetarian' : 'Non vegetarian'">
+
+                <span></span>
+
+              </div>
+
+            </div>
+
+
+            <!-- Food information -->
+            <div class="food-content">
+
+              <div class="food-title-row">
+
+                <h3>{{ item.name }}</h3>
+
+              </div>
+
+              <p class="food-description">
+
+                {{
+                  item.description ||
+                  'Prepared with care and fresh ingredients.'
+                }}
+
+              </p>
+
+
+              <!-- Price and availability -->
+              <div class="food-bottom">
+
+                <div class="price-container">
+
+                  <span class="price-currency">₹</span>
+
+                  <span class="price">
+                    {{ item.price }}
+                  </span>
+
+                </div>
+
+                <div class="food-available">
+
+                  <span class="availability-dot"></span>
+
+                  Available
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- Empty search result -->
+      <div
+        class="empty-state"
+        *ngIf="filteredCategories.length === 0">
+
+        <div class="empty-icon">✧</div>
+
+        <h3>No dishes found</h3>
+
+        <p>
+          We couldn't find any dishes matching your search.
+          Try another name or flavour.
+        </p>
+
+        <button
+          type="button"
+          (click)="searchText = ''; selectCategory('All')">
+
+          Explore All Dishes
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- ===============================
+       LUXURY RESTAURANT FOOTER
+  ================================ -->
+  <footer class="restaurant-footer">
+
+    <div class="footer-decoration footer-decoration-left">
+      ✦
+    </div>
+
+    <div class="footer-decoration footer-decoration-right">
+      ✦
+    </div>
+
+    <div class="footer-content">
+
+      <div class="footer-logo">
+        <img
+          [src]="restaurant.logo"
+          [alt]="restaurant.restaurantName + ' logo'">
+      </div>
+
+      <div class="footer-divider">
+        <span></span>
+        ✦
+        <span></span>
+      </div>
+
+      <h3>{{ restaurant.restaurantName }}</h3>
+
+      <p>Thank you for dining with us.</p>
+
+      <div class="footer-tagline">
+        MADE WITH LOVE <span>✦</span> SERVED WITH PRIDE
+      </div>
+
+      <div class="footer-copyright">
+        AUTHENTIC TASTE. TIMELESS TRADITION.
+      </div>
+
+    </div>
+
+  </footer>
+
+</div>
+
+
+<!-- ===============================
+     LOADING SCREEN
+================================ -->
+<div class="loading-screen" *ngIf="loading">
+
+  <div class="loading-brand">
+
+    <div class="loading-logo">
+      ✦
+    </div>
+
+    <div class="loading-divider"></div>
+
+    <div class="loader"></div>
+
+    <h3>Preparing Your Experience</h3>
+
+    <p>Something delicious is on its way...</p>
+
+  </div>
+
+</div>
+
+
+<!-- ===============================
+     ERROR SCREEN
+================================ -->
+<div class="error-screen"
+     *ngIf="!loading && errorMessage">
+
+  <div class="error-content">
+
+    <div class="error-icon">!</div>
+
+    <h3>Something went wrong</h3>
+
+    <p>{{ errorMessage }}</p>
+
+  </div>
+
+</div>

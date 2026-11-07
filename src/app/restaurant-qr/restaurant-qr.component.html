@@ -1,0 +1,74 @@
+
+<div class="qr-container">
+
+  <h2>Restaurant QR Code Generator</h2>
+
+  <div *ngIf="loading" class="loading">
+    Loading restaurant QR codes...
+  </div>
+
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+
+  <div class="restaurant-grid" *ngIf="!loading">
+
+    <div class="restaurant-card"
+         *ngFor="let restaurant of restaurants">
+
+      <img *ngIf="restaurant.logo"
+           [src]="restaurant.logo"
+           class="restaurant-logo"
+           alt="Restaurant Logo">
+
+      <h3>{{ restaurant.restaurantName }}</h3>
+
+      <p>{{ restaurant.tagline }}</p>
+
+      <!-- Generated QR Code -->
+      <div class="qr-image">
+        <img [src]="restaurant.qrCode"
+             [alt]="restaurant.restaurantName + ' QR Code'">
+      </div>
+
+      <!-- Permanent URL -->
+      <div class="menu-url">
+        <strong>Permanent Menu URL</strong>
+        <a [href]="restaurant.menuUrl"
+           target="_blank">
+          {{ restaurant.menuUrl }}
+        </a>
+      </div>
+<div class="qr-actions">
+
+  <button type="button"
+          (click)="downloadQr(restaurant, 'plain')">
+    Download QR Only
+  </button>
+
+  <button type="button"
+          (click)="downloadQr(restaurant, 'branded')">
+    Download Branded QR
+  </button>
+
+  <button type="button"
+          (click)="downloadQr(restaurant, 'center-logo')">
+    Download QR With Center Logo
+  </button>
+
+  <button type="button"
+          (click)="openMenu(restaurant)">
+    Preview Menu
+  </button>
+
+</div>
+
+    </div>
+
+  </div>
+
+  <div *ngIf="!loading && restaurants.length === 0 && !errorMessage">
+    No restaurants available.
+  </div>
+
+</div>

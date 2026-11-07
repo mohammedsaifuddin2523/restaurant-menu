@@ -1,0 +1,230 @@
+
+<div class="mandi-page">
+
+  <!-- Restaurant Hero -->
+  <header class="mandi-hero">
+
+    <div class="hero-pattern"></div>
+
+    <div class="hero-content">
+
+      <div class="logo-frame">
+        <img
+          [src]="logo"
+          [alt]="restaurantName"
+          (error)="onImageError($event)">
+      </div>
+
+      <span class="hero-eyebrow">
+        AUTHENTIC ARABIAN CUISINE
+      </span>
+
+      <h1>{{ restaurantName }}</h1>
+
+      <div class="hero-divider">
+        <span></span> ✦ <span></span>
+      </div>
+
+      <p>{{ tagline }}</p>
+
+      <div class="hero-location">
+        <span>⌖</span> Hyderabad
+      </div>
+
+      <div class="hero-bottom">
+        <span>TRADITION · FLAVOUR · HOSPITALITY</span>
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- Main Menu -->
+  <main class="mandi-container">
+
+    <!-- Loading -->
+    <div class="empty-menu" *ngIf="loading">
+      <h3>Loading Menu...</h3>
+      <p>Please wait while we prepare your menu.</p>
+    </div>
+
+    <!-- Error -->
+    <div class="empty-menu" *ngIf="!loading && errorMessage">
+      <h3>Unable to Load Menu</h3>
+      <p>{{ errorMessage }}</p>
+
+      <button (click)="loadMenu()">
+        Try Again
+      </button>
+    </div>
+
+    <!-- Menu Content -->
+    <ng-container *ngIf="!loading && !errorMessage">
+
+      <!-- Menu Introduction -->
+      <section class="menu-intro">
+
+        <div>
+          <span class="section-label">
+            EXPLORE OUR SPECIALITIES
+          </span>
+
+          <h2>Our Mandi Menu<span>.</span></h2>
+
+          <p>
+            Authentic Arabian flavours, freshly prepared for you.
+          </p>
+        </div>
+
+        <div class="menu-counter">
+          <strong>{{ totalItems }}</strong>
+          <span>MENU ITEMS</span>
+        </div>
+
+      </section>
+
+
+      <!-- Search -->
+      <div class="mandi-search">
+
+        <span class="search-icon">⌕</span>
+
+        <input
+          type="text"
+          [(ngModel)]="searchText"
+          placeholder="Search chicken, mutton, prawns...">
+
+        <span class="search-label">EXPLORE</span>
+
+      </div>
+
+
+      <!-- Categories -->
+      <nav class="mandi-categories">
+
+        <button
+          [class.active]="selectedCategory === 'All'"
+          (click)="selectCategory('All')">
+          ✦ All
+        </button>
+
+        <button
+          *ngFor="let category of categories"
+          [class.active]="selectedCategory === category.categoryName"
+          (click)="selectCategory(category.categoryName)">
+
+          {{ category.categoryName }}
+
+        </button>
+
+      </nav>
+
+
+      <!-- Menu Sections -->
+      <section
+        *ngFor="let category of filteredCategories"
+        class="mandi-category">
+
+        <div class="category-title">
+
+          <div>
+            <span class="section-label">
+              FRESHLY PREPARED
+            </span>
+
+            <h2>{{ category.categoryName }}</h2>
+          </div>
+
+          <span class="dish-count">
+            {{ category.items.length }} DISHES
+          </span>
+
+        </div>
+
+
+        <!-- Food Grid -->
+        <div class="mandi-food-grid">
+
+          <article
+            class="mandi-food-card"
+            *ngFor="let item of category.items">
+
+            <div class="food-image">
+
+              <img
+                [src]="item.image"
+                [alt]="item.name"
+                loading="lazy"
+                (error)="onImageError($event)">
+
+              <span class="image-tag">
+                MANDI SPECIAL
+              </span>
+
+            </div>
+
+            <div class="food-details">
+
+              <h3>{{ item.name }}</h3>
+
+              <p>{{ item.description }}</p>
+
+              <div class="food-footer">
+
+                <div class="food-price">
+                  <span>₹</span>{{ item.price }}
+                </div>
+
+                <span class="available">
+                  <span></span> Available
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- Empty Search -->
+      <div
+        class="empty-menu"
+        *ngIf="filteredCategories.length === 0">
+
+        <div>✦</div>
+
+        <h3>No dishes found</h3>
+
+        <p>Try another dish or category.</p>
+
+      </div>
+
+    </ng-container>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="mandi-footer">
+
+    <img
+      [src]="logo"
+      [alt]="restaurantName"
+      (error)="onImageError($event)">
+
+    <h2>{{ restaurantName }}</h2>
+
+    <p>Thank you for choosing us.</p>
+
+    <span>
+      AUTHENTIC FLAVOURS · UNFORGETTABLE MOMENTS
+    </span>
+
+  </footer>
+
+</div>

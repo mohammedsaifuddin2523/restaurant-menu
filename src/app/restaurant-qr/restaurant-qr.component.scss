@@ -1,0 +1,73 @@
+
+.qr-container {
+  padding: 25px;
+}
+
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.restaurant-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.restaurant-logo {
+  max-width: 100px;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.qr-image {
+  margin: 15px auto;
+}
+
+.qr-image img {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+}
+
+.menu-url {
+  overflow-wrap: anywhere;
+  margin: 15px 0;
+  font-size: 12px;
+}
+
+.menu-url a {
+  display: block;
+  margin-top: 8px;
+  color: #1976d2;
+}
+
+.qr-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.qr-actions button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #1976d2;
+  color: white;
+  cursor: pointer;
+}
+
+.qr-actions button:hover {
+  background: #125ca1;
+}
+
+.loading,
+.error {
+  padding: 15px;
+}

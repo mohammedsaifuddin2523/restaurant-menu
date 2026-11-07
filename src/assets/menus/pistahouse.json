@@ -1,0 +1,114 @@
+
+{
+  "id": "pistahouse",
+  "restaurantName": "Pista House",
+  "tagline": "Authentic Hyderabadi Cuisine",
+  "logo": "assets/images/pistahouse.png",
+  "address": "Hyderabad",
+  "phone": "",
+  "categories": [
+    {
+      "id": 1,
+      "categoryName": "Burgers",
+      "items": [
+        {"id": 101, "name": "Chicken Burger", "description": "Delicious crispy chicken burger", "price": 90, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 102, "name": "Chicken Cheese Burger", "description": "", "price": 99, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 103, "name": "Chicken Grilled Burger", "description": "", "price": 99, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 104, "name": "Chicken 65 Burger", "description": "", "price": 99, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 105, "name": "Chicken 65 Cheese Burger", "description": "", "price": 99, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 106, "name": "B.B.Q Burger", "description": "", "price": 99, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 107, "name": "B.B.Q Cheese Burger", "description": "", "price": 99, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 108, "name": "Tandoori Burger", "description": "", "price": 99, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 109, "name": "Tandoori Cheese Burger", "description": "", "price": 99, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 110, "name": "Zinger Burger", "description": "", "price": 99, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 111, "name": "Zinger Cheese Burger", "description": "", "price": 99, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 112, "name": "Veg Burger", "description": "", "price": 99, "image": "", "isVeg": true, "isAvailable": true},
+        {"id": 113, "name": "Veg Cheese Burger", "description": "", "price": 99, "image": "", "isVeg": true, "isAvailable": true}
+      ]
+    },
+    {
+      "id": 2,
+      "categoryName": "Sandwiches",
+      "items": [
+        {"id": 201, "name": "Chicken Sandwich", "description": "", "price": 90, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 202, "name": "Chicken Cheese Sandwich", "description": "", "price": 99, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 203, "name": "Veg Sandwich", "description": "", "price": 80, "image": "", "isVeg": true, "isAvailable": true},
+        {"id": 204, "name": "Veg Cheese Sandwich", "description": "", "price": 89, "image": "", "isVeg": true, "isAvailable": true},
+        {"id": 205, "name": "Tikka Sandwich", "description": "", "price": 99, "image": "", "isVeg": false, "isAvailable": true}
+      ]
+    },
+    {
+      "id": 3,
+      "categoryName": "Wraps",
+      "items": [
+        {"id": 301, "name": "Chicken Kabab Wrap", "description": "", "price": 120, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 302, "name": "Chicken Tikka Wrap", "description": "", "price": 120, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 303, "name": "Veg Wrap", "description": "", "price": 99, "image": "", "isVeg": true, "isAvailable": true},
+        {"id": 304, "name": "Chicken Cheese Wrap", "description": "", "price": 140, "image": "", "isVeg": false, "isAvailable": true}
+      ]
+    },
+    {
+      "id": 4,
+      "categoryName": "Rolls",
+      "items": [
+        {"id": 401, "name": "Chicken 65 Roll", "description": "", "price": 99, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 402, "name": "Chicken Katti Roll", "description": "", "price": 90, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 403, "name": "Chicken Cheese Roll", "description": "", "price": 99, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 404, "name": "Chicken Butter Roll", "description": "", "price": 70, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 405, "name": "Chicken Zinger Roll", "description": "", "price": 99, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 406, "name": "Chicken Tandoori Roll", "description": "", "price": 99, "image": "", "isVeg": false, "isAvailable": true}
+      ]
+    },
+    {
+      "id": 5,
+      "categoryName": "Pizzas",
+      "items": [
+        {"id": 501, "name": "Veg Pizza", "description": "", "price": 190, "image": "", "isVeg": true, "isAvailable": true},
+        {"id": 502, "name": "Veg Extra Cheese Pizza", "description": "", "price": 199, "image": "", "isVeg": true, "isAvailable": true},
+        {"id": 503, "name": "Chicken Pizza", "description": "", "price": 220, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 504, "name": "Chicken Extra Cheese Pizza", "description": "", "price": 230, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 505, "name": "Chicken 65 Pizza", "description": "", "price": 230, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 506, "name": "Chicken 65 Extra Pizza", "description": "", "price": 240, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 507, "name": "Chicken B.B.Q Pizza", "description": "", "price": 230, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 508, "name": "Chicken B.B.Q Extra Cheese Pizza", "description": "", "price": 240, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 509, "name": "Plain Cheese Pizza", "description": "", "price": 180, "image": "", "isVeg": true, "isAvailable": true},
+        {"id": 510, "name": "Tandoori Pizza", "description": "", "price": 230, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 511, "name": "Chicken Tikka Pizza", "description": "", "price": 230, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 512, "name": "Nuggets Pizza", "description": "", "price": 199, "image": "", "isVeg": false, "isAvailable": true}
+      ]
+    },
+    {
+      "id": 6,
+      "categoryName": "Salads",
+      "items": [
+        {"id": 601, "name": "Chicken Kabab Salad", "description": "", "price": 120, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 602, "name": "Chicken Tikka Salad", "description": "", "price": 120, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 603, "name": "Chicken 65 Salad", "description": "", "price": 99, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 604, "name": "Chicken Grilled Salad", "description": "", "price": 120, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 605, "name": "Veg Salad", "description": "", "price": 99, "image": "", "isVeg": true, "isAvailable": true},
+        {"id": 606, "name": "Paneer Grilled Salad", "description": "", "price": 99, "image": "", "isVeg": true, "isAvailable": true},
+        {"id": 607, "name": "Extra Chicken", "description": "", "price": 20, "image": "", "isVeg": false, "isAvailable": true},
+        {"id": 608, "name": "Extra Sauce", "description": "", "price": 20, "image": "", "isVeg": true, "isAvailable": true},
+        {"id": 609, "name": "Extra Vegetable", "description": "", "price": 20, "image": "", "isVeg": true, "isAvailable": true}
+      ]
+    },
+    {
+      "id": 7,
+      "categoryName": "Mocktails",
+      "items": [
+        {"id": 701, "name": "Virgin Mojito", "description": "", "price": 70, "image": "", "isVeg": true, "isAvailable": true},
+        {"id": 702, "name": "Water Melon", "description": "", "price": 70, "image": "", "isVeg": true, "isAvailable": true},
+        {"id": 703, "name": "Kiwi Blast", "description": "", "price": 70, "image": "", "isVeg": true, "isAvailable": true},
+        {"id": 704, "name": "Kiwi Lemon Zinger Mint", "description": "", "price": 70, "image": "", "isVeg": true, "isAvailable": true},
+        {"id": 705, "name": "Blue Berry", "description": "", "price": 70, "image": "", "isVeg": true, "isAvailable": true},
+        {"id": 706, "name": "Strawberry", "description": "", "price": 70, "image": "", "isVeg": true, "isAvailable": true},
+        {"id": 707, "name": "Mango Spicy", "description": "", "price": 70, "image": "", "isVeg": true, "isAvailable": true},
+        {"id": 708, "name": "Zeera Mocktail", "description": "", "price": 70, "image": "", "isVeg": true, "isAvailable": true},
+        {"id": 709, "name": "Green Apple", "description": "", "price": 70, "image": "", "isVeg": true, "isAvailable": true},
+        {"id": 710, "name": "Orange", "description": "", "price": 70, "image": "", "isVeg": true, "isAvailable": true},
+        {"id": 711, "name": "Mango", "description": "", "price": 70, "image": "", "isVeg": true, "isAvailable": true},
+        {"id": 712, "name": "Black Current", "description": "", "price": 70, "image": "", "isVeg": true, "isAvailable": true}
+      ]
+    }
+  ]
+}
