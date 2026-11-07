@@ -1,0 +1,186 @@
+
+{
+  "restaurantName": "Mandi Town Hyderabad",
+  "tagline": "Authentic Arabian Mandi Experience",
+  "logo": "assets/restaurants/manditown/mandiRestaurant.png",
+  "categories": [
+    {
+      "categoryName": "Chicken Mandi",
+     
+      "items": [
+        {
+          "name": "Chicken Mandi (Single / 1 Pc)",
+          "description": "Authentic Arabian rice served with one piece of chicken.",
+          "price": 190,
+           "image": "assets/restaurants/manditown/singleChickenMandi.png",
+          "isAvailable": true
+        },
+        {
+          "name": "Chicken Mandi (Full / 2 Pcs)",
+          "description": "Traditional chicken mandi with two pieces.",
+          "price": 370,
+           "image": "assets/restaurants/manditown/ChickenMandi2Pieces.png",
+          "isAvailable": true
+        },
+      
+        {
+          "name": "Chicken Mandi (4 Pcs)",
+          "description": "A generous Arabian chicken mandi platter.",
+          "price": 710,
+           "image": "assets/restaurants/manditown/chicken4piece.png",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "categoryName": "Mutton Mandi",
+      "items": [
+        {
+          "name": "Mutton Mandi (Single / 1 Pc)",
+          "description": "Tender mutton served with aromatic mandi rice.",
+          "price": 260,
+           "image": "assets/restaurants/manditown/MuttonMandi.png",
+          "isAvailable": true
+        },
+        {
+          "name": "Mutton Mandi (Full / 2 Pcs)",
+          "description": "Traditional mutton mandi with two pieces.",
+          "price": 470,
+           "image": "assets/restaurants/manditown/mutton2Piece.png",
+          "isAvailable": true
+        },
+        {
+          "name": "Mutton Mandi (Mini / 3 Pcs)",
+          "description": "Rich Arabian mutton mandi platter.",
+          "price": 690,
+           "image": "assets/restaurants/manditown/MuttonMandi.png",
+          "isAvailable": true
+        },
+        {
+          "name": "Mutton Mandi (Special / 4 Pcs)",
+          "description": "Special mutton mandi platter with four pieces.",
+          "price": 820,
+           "image": "assets/restaurants/manditown/mutton2Piece.png",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "categoryName": "Fish Mandi",
+      "items": [
+        {
+          "name": "Fish Mandi (Single)",
+          "description": "Fresh fish served with Arabian mandi rice.",
+          "price": 230,
+           "image": "assets/restaurants/manditown/FishSingle.png",
+          "isAvailable": true
+        },
+        {
+          "name": "Fish Mandi (Full)",
+          "description": "A satisfying fish mandi platter.",
+          "price": 400,
+           "image": "assets/restaurants/manditown/FullFishMandi.png",
+          "isAvailable": true
+        },
+        {
+          "name": "Fish Mandi (Special)",
+          "description": "Special fish mandi serving.",
+          "price": 710,
+           "image": "assets/restaurants/manditown/FullFishMandi.png",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "categoryName": "Prawns Mandi",
+      "items": [
+        {
+          "name": "Prawns Mandi (Single / 8 Pcs)",
+          "description": "Juicy prawns served with aromatic mandi rice.",
+          "price": 260,
+           "image": "assets/restaurants/manditown/PrownMandi.png",
+          "isAvailable": true
+        },
+        {
+          "name": "Prawns Mandi (Full / 12 Pcs)",
+          "description": "A generous prawns mandi platter.",
+          "price": 420,
+           "image": "assets/restaurants/manditown/PrownMandi.png",
+          "isAvailable": true
+        }
+      
+      ]
+    },
+    {
+      "categoryName": "Faham Mandi",
+      "items": [
+        {
+          "name": "Faham Mandi (Single / 1 Pc)",
+          "description": "Arabian faham chicken with traditional rice.",
+          "price": 210,
+           "image": "assets/restaurants/manditown/FahamMandi.png",
+          "isAvailable": true
+        },
+        {
+          "name": "Faham Mandi (Full / 2 Pcs)",
+          "description": "Smoky faham chicken mandi platter.",
+          "price": 400,
+           "image": "assets/restaurants/manditown/fahamMandi2pieces.png",
+          "isAvailable": true
+        },
+        {
+          "name": "Faham Mandi (Special / 4 Pcs)",
+          "description": "Special faham mandi with four pieces.",
+          "price": 710,
+           "image": "assets/restaurants/manditown/fahamMandi2pieces.png",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "categoryName": "Chicken 65 Mandi",
+      "items": [
+        {
+          "name": "Chicken 65 Mandi (Single / 1 Pc)",
+          "description": "Spicy Chicken 65 served with mandi rice.",
+          "price": 220,
+           "image": "assets/restaurants/manditown/chicken65Mandi.png",
+          "isAvailable": true
+        },
+        {
+          "name": "Chicken 65 Mandi (Full / 2 Pcs)",
+          "description": "Chicken 65 mandi with two pieces.",
+          "price": 420,
+           "image": "assets/restaurants/manditown/chicken65Mandi.png",
+          "isAvailable": true
+        },
+        {
+          "name": "Chicken 65 (Special fry)",
+          "description": "Special Chicken 65 mandi platter.",
+          "price": 730,
+           "image": "assets/restaurants/manditown/chicken65.png",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "categoryName": "Peshawari Dajaj Mandi",
+      "items": [
+        {
+          "name": "Asli Peshawari Dajaj Mandi (Full)",
+          "description": "Traditional Peshawari-style chicken mandi.",
+          "price": 480,
+           "image": "assets/restaurants/manditown/DajajMandiFul.png",
+          "isAvailable": true
+        },
+        {
+          "name": "Asli Peshawari Dajaj Mandi (Special)",
+          "description": "Special Peshawari Dajaj mandi platter.",
+          "price": 770,
+           "image": "assets/restaurants/manditown/DajajMandiFul.png",
+          "isAvailable": true
+        }
+      ]
+    }
+  ]
+}

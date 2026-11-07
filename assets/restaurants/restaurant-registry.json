@@ -1,0 +1,13 @@
+{
+  "restaurants": [
+    {
+      "slug": "manditown",
+      "configPath": "assets/restaurants/manditown/menu.json"
+    },
+    {
+      "slug": "pistahouse",
+      "configPath": "assets/menus/pistahouse.json"
+    }
+  ]
+}
+
